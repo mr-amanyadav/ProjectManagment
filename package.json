@@ -1,0 +1,20 @@
+{
+  "name": "projectmanagment",
+  "version": "1.0.0",
+  "description": "A Project managment application for beginners",
+  "keywords": [
+    "backend",
+    "API",
+    "creation"
+  ],
+  "license": "ISC",
+  "author": "Aman Kumar Yadav",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "devDependencies": {
+    "prettier": "3.9.4"
+  }
+}
