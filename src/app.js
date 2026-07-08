@@ -3,10 +3,12 @@ import cors from "cors";
 
 const app = express();
 
-// basic configration
+// basic configuration
 app.use(express.json({ limit: "16kb" }));
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(express.static("public"));
+
+// core configurations
 
 app.use(
   cors({
@@ -16,6 +18,12 @@ app.use(
     allowedHeaders: ["Content-Type", "Authorization"],
   }),
 );
+
+// import the routes
+
+import healthCheckRouter  from "./routes/healthcheck.routes.js";
+app.use("/api/v1/healthcheck",healthCheckRouter);
+
 
 app.get("/", (req, res) => {
   res.send("welcome");
